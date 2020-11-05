@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'kazumasa1826.pythonanywhere.com'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -144,3 +145,4 @@ EMAIL_HOST_USER = 'kazumasaono0422@gmail.com'
 EMAIL_HOST_PASSWORD = 'egosxvthygrsquss'
 
 django_heroku.settings(locals())
+

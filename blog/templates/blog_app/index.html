@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}   
-<h1 class="mt-5 pt-4 text-center">ブログサイト</h1>
+<h1 class="mt-5 pt-4 text-center">釣り投稿するんです！</h1>
 
 <!-- モーダル -->
 <button data-toggle="modal" data-target=".bd-example-modal-lg" style="margin: 0 auto;" type="button" class="btn btn-primary d-block my-3 px-5"><i class="fa fa-search">検索</i></button>
@@ -9,14 +9,14 @@
      <div class="modal-content">
        <div class="card text-align-center">
          <div class="card-body">
-<!-- filter.html -->
+
            {% include 'blog_app/filter.html' %}
          </div>
        </div>
      </div>
    </div>
  </div>
-<!-- 検索結果の詳細を表示 -->
+
 {% if title_or_user or date_min or date_max or tag %}
 <p class="mb-0 text-center font-weight-bold h3">検索結果：{{posts.count}}件</p>
 <table class="table table-bordered">
@@ -60,11 +60,11 @@
      <p class="card-text">
        {{ post.text|truncatechars:17 }}
      </p>
-   </a> #ここから
+   </a> 
    <p></p>
      <p>#{{post.tag}}</p>
      <p>{{post.created_at}} |
-     <a href="{% url 'user_app:detail' post.user.id %}">{{post.user.username}}</a></p> #ここまで
+     <a href="{% url 'user_app:detail' post.user.id %}">{{post.user.username}}</a></p> 
  </div>
 </div>
 {% endfor %}
