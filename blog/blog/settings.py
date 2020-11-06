@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'oc#!p70)#rz26!1s^c9))y3$%&wlr=d!ay-t9qgrwk^@_bga8y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -144,12 +144,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'kazumasaono0422@gmail.com'
 EMAIL_HOST_PASSWORD = 'egosxvthygrsquss'
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
- 
-if not DEBUG:
-    import django_heroku
-    django_heroku.settings(locals())
-
+django_heroku.settings(locals())
