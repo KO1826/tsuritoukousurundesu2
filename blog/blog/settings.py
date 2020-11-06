@@ -34,7 +34,11 @@ ALLOWED_HOSTS = ['127.0.0.1','herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
     'kazumasa1826.pythonanywhere.com'
+=======
+    'rikusaba1826.pythonanywhere.com',
+>>>>>>> origin/main
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -153,6 +157,7 @@ EMAIL_HOST_USER = 'kazumasaono0422@gmail.com'
 EMAIL_HOST_PASSWORD = 'egosxvthygrsquss'
 
 django_heroku.settings(locals())
+<<<<<<< HEAD
 
 try:
     from .local_settings import *
@@ -165,3 +170,5 @@ if not DEBUG:
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+=======
+>>>>>>> origin/main
