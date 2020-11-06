@@ -25,11 +25,11 @@
      <label for="category">タグ</label>
      <select id="tag" class="form-control" name="tag">
        <option selected>タグを選択...</option>
-       <!-- setting.pyからの読み込み ここから -->
+      
        {% for tag in tags %}
        <option value="{{ tag }}">{{ tag }}</option>
        {% endfor %}
-       <!-- setting.pyからの読み込み ここまで -->
+      
      </select>
    </div>
  </div>
